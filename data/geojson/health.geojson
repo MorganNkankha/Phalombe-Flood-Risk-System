@@ -1,0 +1,19 @@
+{
+"type": "FeatureCollection",
+"name": "health",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"xy_coordinate_resolution": 1e-05,
+"features": [
+{ "type": "Feature", "properties": { "id": "F099", "name": "Migowi", "ta": "Kaduya", "type": "Health facility", "risk_class": "High", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.68697, -15.71341 ] } },
+{ "type": "Feature", "properties": { "id": "F100", "name": "Mkwayi Ref Camp", "ta": "Jenala", "type": "Health facility", "risk_class": "None", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.62004, -15.58344 ] } },
+{ "type": "Feature", "properties": { "id": "F101", "name": "Mpasa", "ta": "Mkhumba", "type": "Health facility", "risk_class": "Medium", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.60062, -15.81038 ] } },
+{ "type": "Feature", "properties": { "id": "F102", "name": "Mulomba", "ta": "Mkhumba", "type": "Health facility", "risk_class": "None", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.51257, -15.76701 ] } },
+{ "type": "Feature", "properties": { "id": "F103", "name": "Mwanga", "ta": "Jenala", "type": "Health facility", "risk_class": "Low", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.53225, -15.64208 ] } },
+{ "type": "Feature", "properties": { "id": "F104", "name": "Nambazo", "ta": "Chiwalo", "type": "Health facility", "risk_class": "None", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.82085, -15.55017 ] } },
+{ "type": "Feature", "properties": { "id": "F105", "name": "Nkhulambe", "ta": "Nkhulambe", "type": "Health facility", "risk_class": "High", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.75223, -15.85452 ] } },
+{ "type": "Feature", "properties": { "id": "F106", "name": "Phalombe District Hospital", "ta": "Mkhumba", "type": "Health facility", "risk_class": "None", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.61835, -15.81892 ] } },
+{ "type": "Feature", "properties": { "id": "F107", "name": "Chiringa", "ta": "Kaduya", "type": "Health facility", "risk_class": "High", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.68697, -15.71341 ] } },
+{ "type": "Feature", "properties": { "id": "F108", "name": "Chitekesa", "ta": "Jenala", "type": "Health facility", "risk_class": "None", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.56397, -15.55962 ] } },
+{ "type": "Feature", "properties": { "id": "F109", "name": "Kalinde", "ta": "Kaduya", "type": "Health facility", "risk_class": "High", "source": "Ministry of Health via DoDMA basemap" }, "geometry": { "type": "Point", "coordinates": [ 35.72284, -15.66344 ] } }
+]
+}

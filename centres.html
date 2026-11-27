@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evacuation Centres · Phalombe Flood Risk &amp; Evacuation Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Working starter for the evacuation-analysis member: same layout, same data layer -->
+<body data-page="centres">
+  <main class="main" id="main">
+    <div class="split-page">
+      <div class="map-box"><div id="centresMap" aria-label="Map of potential evacuation centres"></div></div>
+
+      <section class="card table-card">
+        <div class="card-head">
+          <h2 class="card-title">Potential evacuation centres</h2>
+          <span class="card-note" id="centreCount"></span>
+        </div>
+        <div class="chips" id="statusChips" role="group" aria-label="Filter by status"></div>
+        <div class="filters">
+          <input id="centreSearch" class="input" type="search" placeholder="Search centre name" aria-label="Search centre name">
+          <select id="centreTa" class="select" aria-label="Filter by Traditional Authority"><option value="All">TA: All</option></select>
+          <select id="centreType" class="select" aria-label="Filter by type"><option value="All">Type: All</option></select>
+        </div>
+        <div class="table-wrap">
+          <table class="data-table">
+            <thead><tr>
+              <th><button data-sort="name">Centre</button></th>
+              <th><button data-sort="ta">TA</button></th>
+              <th><button data-sort="type">Type</button></th>
+              <th><button data-sort="served">Serves</button></th>
+              <th><button data-sort="status">Status</button></th>
+            </tr></thead>
+            <tbody id="centreBody"></tbody>
+          </table>
+        </div>
+        <p class="note">Schools are listed as potential centres only. None has been verified as a safe shelter.</p>
+      </section>
+    </div>
+  </main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/turf.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="data/phalombe-data.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/map-common.js"></script>
+  <script src="js/centres.js"></script>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evacuation Planning · Phalombe Flood Risk &amp; Evacuation Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<!-- Working starter for the evacuation-analysis member -->
+<body data-page="planning">
+  <main class="main" id="main">
+    <div class="plan-page">
+      <form class="card plan-form" id="planForm">
+        <div class="card-head"><h2 class="card-title">Plan an evacuation</h2></div>
+        <div class="field">
+          <label for="startSelect">Starting settlement</label>
+          <select id="startSelect" class="select"></select>
+        </div>
+        <div class="field">
+          <label for="destSelect">Destination centre</label>
+          <select id="destSelect" class="select"></select>
+        </div>
+        <button class="btn btn-primary" type="submit">Find evacuation route</button>
+        <div class="selected-centre" id="centreCard"></div>
+      </form>
+
+      <div class="map-box"><div id="planMap" aria-label="Evacuation route preview"></div></div>
+
+      <div class="plan-results">
+        <div class="card">
+          <div class="card-head"><h2 class="card-title">Straight-line distance</h2></div>
+          <div class="big-number" id="distOut">–</div>
+          <p class="note" id="walkOut">Choose a settlement and a centre, then select "Find evacuation route".</p>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 class="card-title">Accessibility checks</h2></div>
+          <div id="checks"></div>
+          <p class="note">Road-network routing will come from the backend. The line shown is a straight-line preview, not a path to follow.</p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/turf.min.js"></script>
+  <script src="js/config.js"></script>
+  <script src="data/phalombe-data.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/map-common.js"></script>
+  <script src="js/planning.js"></script>
+</body>
+</html>

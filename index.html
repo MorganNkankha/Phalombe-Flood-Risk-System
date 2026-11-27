@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard · Phalombe Flood Risk &amp; Evacuation Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="dashboard">
+  <main class="main" id="main">
+
+    <!-- Summary numbers: counted from the data in dashboard.js -->
+    <section class="stats-row" aria-label="Summary">
+      <div class="card stat">
+        <span class="stat-label">Mapped settlements</span>
+        <span class="stat-value c-dark" id="statSettlements">–</span>
+        <span class="stat-sub" id="statSettlementsSub">&nbsp;</span>
+      </div>
+      <div class="card stat">
+        <span class="stat-label">Settlements in flood-risk zones</span>
+        <span class="stat-value c-red" id="statExposed">–</span>
+        <span class="stat-sub" id="statExposedSub">&nbsp;</span>
+      </div>
+      <div class="card stat">
+        <span class="stat-label">Potential evacuation centres</span>
+        <span class="stat-value c-blue" id="statCentres">–</span>
+        <span class="stat-sub" id="statCentresSub">&nbsp;</span>
+      </div>
+      <div class="card stat">
+        <span class="stat-label">Centres needing verification</span>
+        <span class="stat-value c-amber" id="statVerify">–</span>
+        <span class="stat-sub" id="statVerifySub">&nbsp;</span>
+      </div>
+    </section>
+
+    <section class="dash-grid">
+      <div class="map-box">
+        <div id="dashMap" class="dash-map" aria-label="Map of flood-risk zones in Phalombe District"></div>
+        <div class="map-panel hover-info" id="hoverInfo" hidden></div>
+      </div>
+
+      <div class="dash-side">
+        <div class="card">
+          <div class="card-head"><h2 class="card-title">Flood-risk classes</h2></div>
+          <div class="risk-scale" aria-hidden="true">
+            <span style="background:var(--high)"></span><span style="background:var(--medium)"></span><span style="background:var(--low)"></span>
+          </div>
+          <div id="classRows"></div>
+        </div>
+        <div class="card">
+          <div class="card-head"><h2 class="card-title">Quick actions</h2></div>
+          <a class="btn btn-primary" href="map.html">Open flood risk map</a>
+          <a class="btn btn-outline" href="centres.html">Browse evacuation centres</a>
+          <a class="btn btn-outline" href="planning.html">Plan an evacuation</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="dash-bottom">
+      <div class="card">
+        <div class="card-head">
+          <h2 class="card-title">Exposed settlements by Traditional Authority</h2>
+          <span class="card-note">Count of villages per risk class</span>
+        </div>
+        <div class="chart-box"><canvas id="taChart" aria-label="Bar chart of exposed settlements per Traditional Authority" role="img"></canvas></div>
+      </div>
+      <div class="card">
+        <div class="card-head">
+          <h2 class="card-title">Highlighted risk areas</h2>
+          <a class="link" href="map.html">View all on map</a>
+        </div>
+        <div class="table-wrap" style="max-height:270px">
+          <table class="data-table">
+            <thead><tr><th>Settlement</th><th>Traditional Authority</th><th class="r">Nearest centre</th><th>Risk</th></tr></thead>
+            <tbody id="riskTableBody"><tr><td colspan="4" class="empty-state">Loading…</td></tr></tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="vendor/leaflet/leaflet.js"></script>
+  <script src="vendor/turf.min.js"></script>
+  <script src="vendor/chart.umd.js"></script>
+  <script src="js/config.js"></script>
+  <script src="data/phalombe-data.js"></script>
+  <script src="js/data.js"></script>
+  <script src="js/layout.js"></script>
+  <script src="js/map-common.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>
